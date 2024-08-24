@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "a5fa212c-075c-455a-b922-8c9feaecf906",
+		"name": "Avion Batch 35",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "107324",
+		"_collection_link": "https://cloudy-spaceship-635127.postman.co/workspace/My-Workspace~3b9ec7d7-b41b-4bfb-803c-b44ad99c2fbf/collection/107324-a5fa212c-075c-455a-b922-8c9feaecf906?action=share&source=collection_link&creator=107324"
+	},
+	"item": [
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"name\": \"Ed\"\n        \"email\": \"user1@example.com\",\n        \"password\": \"password\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"password\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI4MzU5OWU3ZS00N2UxLTRlZGItOTExNy0xYWI0MDdlYzg4YWYiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI0NDY1MDQxLCJleHAiOjE3MjQ1NTE0NDF9.BR54pWqNTkRY5MyER48P-rTnl7eT57TaDBAVNYxMYhU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"password\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SecuredAssets",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhNTM1ZjIzMi0yY2VkLTRiM2EtYjc5Mi1iNDY0NTU3NzQyMjIiLCJzdWIiOiIxIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNzI0NDY1MjMwLCJleHAiOjE3MjQ1NTE2MzB9.0-SfLLUgWBOBnIuHG94EXLmWy-h8sxIAQVFgJ0eilLQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\": {\n        \"email\": \"user1@example.com\",\n        \"password\": \"password\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/secured_assets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"secured_assets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
